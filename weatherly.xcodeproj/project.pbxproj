@@ -490,6 +490,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E9DC9AAA8B9DCA6BB0DA3EA5 /* Pods-weatherly.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NYV7TZJ4MH;
 				INFOPLIST_FILE = weatherly/Info.plist;
@@ -504,6 +505,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 97D681F05E84E23CB88F6D2A /* Pods-weatherly.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NYV7TZJ4MH;
 				INFOPLIST_FILE = weatherly/Info.plist;
@@ -591,6 +593,7 @@
 				E7F628EA1E2A157B00CD7EEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7F628EB1E2A157B00CD7EEC /* Build configuration list for PBXNativeTarget "weatherlyTests" */ = {
 			isa = XCConfigurationList;
@@ -599,6 +602,7 @@
 				E7F628ED1E2A157B00CD7EEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7F628EE1E2A157B00CD7EEC /* Build configuration list for PBXNativeTarget "weatherlyUITests" */ = {
 			isa = XCConfigurationList;
@@ -607,6 +611,7 @@
 				E7F628F01E2A157B00CD7EEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
