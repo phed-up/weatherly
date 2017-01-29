@@ -38,9 +38,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         currentWeather.downloadWeatherDetails
             //This is applying the function from the class to download the weather data
             {
-                dateLabel.text = currentWeather.date
-                locationLabel.text = currentWeather.cityName
-                
+               updateMainUI()
             }
         
         
@@ -74,11 +72,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
    
-//    func updateMainUI()
-//    {
-//        dateLabel.text = currentWeather.date
-//        locationLabel.text = currentWeather.cityName
-//    }
+    func updateMainUI()
+    {
+        dateLabel.text = currentWeather.date
+        locationLabel.text = currentWeather.cityName
+    }
     
     
     

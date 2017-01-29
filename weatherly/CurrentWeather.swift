@@ -21,7 +21,7 @@ class CurrentWeather
     {
         if _cityName == nil
         {
-            _cityName = "nope"
+            _cityName = ""
         }
         
         return _cityName
