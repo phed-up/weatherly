@@ -15,6 +15,8 @@
 		E7F628CE1E2A157B00CD7EEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F628CC1E2A157B00CD7EEC /* LaunchScreen.storyboard */; };
 		E7F628D91E2A157B00CD7EEC /* weatherlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F628D81E2A157B00CD7EEC /* weatherlyTests.swift */; };
 		E7F628E41E2A157B00CD7EEC /* weatherlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F628E31E2A157B00CD7EEC /* weatherlyUITests.swift */; };
+		E7F628F21E2B01E700CD7EEC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F628F11E2B01E700CD7EEC /* Constants.swift */; };
+		E7F628F41E2B043900CD7EEC /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F628F31E2B043900CD7EEC /* CurrentWeather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		E7F628DF1E2A157B00CD7EEC /* weatherlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weatherlyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7F628E31E2A157B00CD7EEC /* weatherlyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherlyUITests.swift; sourceTree = "<group>"; };
 		E7F628E51E2A157B00CD7EEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7F628F11E2B01E700CD7EEC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../Constants.swift; sourceTree = "<group>"; };
+		E7F628F31E2B043900CD7EEC /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		E9DC9AAA8B9DCA6BB0DA3EA5 /* Pods-weatherly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weatherly/Pods-weatherly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,8 +125,10 @@
 		E7F628C21E2A157B00CD7EEC /* weatherly */ = {
 			isa = PBXGroup;
 			children = (
+				E7F628F11E2B01E700CD7EEC /* Constants.swift */,
 				E7F628C31E2A157B00CD7EEC /* AppDelegate.swift */,
 				E7F628C51E2A157B00CD7EEC /* ViewController.swift */,
+				E7F628F31E2B043900CD7EEC /* CurrentWeather.swift */,
 				E7F628C71E2A157B00CD7EEC /* Main.storyboard */,
 				E7F628CA1E2A157B00CD7EEC /* Assets.xcassets */,
 				E7F628CC1E2A157B00CD7EEC /* LaunchScreen.storyboard */,
@@ -339,6 +345,8 @@
 			files = (
 				E7F628C61E2A157B00CD7EEC /* ViewController.swift in Sources */,
 				E7F628C41E2A157B00CD7EEC /* AppDelegate.swift in Sources */,
+				E7F628F41E2B043900CD7EEC /* CurrentWeather.swift in Sources */,
+				E7F628F21E2B01E700CD7EEC /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

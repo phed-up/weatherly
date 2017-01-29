@@ -8,22 +8,51 @@
 
 import UIKit
 
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var dateLabel: UIView!
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var currentTempLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var currentImage: UIImageView!
     @IBOutlet weak var currentTypeLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    var currentWeather = CurrentWeather()
+    //This lets us access the class CurrentWeather
+    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        
+        
         tableView.delegate = self
         tableView.dataSource = self
+        
+        
+
+        
+        currentWeather.downloadWeatherDetails
+            //This is applying the function from the class to download the weather data
+            {
+                dateLabel.text = currentWeather.date
+                locationLabel.text = currentWeather.cityName
+                
+            }
+        
+        
+//        dateLabel.text = currentWeather.date
+        currentTempLabel.text = "Temp"
+//        locationLabel.text = currentWeather.cityName
+        currentImage.image = #imageLiteral(resourceName: "rainy")
+        currentTypeLabel.text = "??"
+        
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,6 +73,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         return cell
     }
-
+   
+//    func updateMainUI()
+//    {
+//        dateLabel.text = currentWeather.date
+//        locationLabel.text = currentWeather.cityName
+//    }
+    
+    
+    
+    
 }
 
