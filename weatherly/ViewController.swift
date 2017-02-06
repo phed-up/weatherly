@@ -17,9 +17,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var currentImage: UIImageView!
     @IBOutlet weak var currentTypeLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+
     
     var currentWeather = CurrentWeather()
     //This lets us access the class CurrentWeather
+    
+    var forcast = Forcast()
     
 
 
@@ -38,15 +41,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         currentWeather.downloadWeatherDetails
             //This is applying the function from the class to download the weather data
             {
-               updateMainUI()
+               self.updateMainUI()
             }
         
         
 //        dateLabel.text = currentWeather.date
-        currentTempLabel.text = "Temp"
+//        currentTempLabel.text = ""
 //        locationLabel.text = currentWeather.cityName
-        currentImage.image = #imageLiteral(resourceName: "rainy")
-        currentTypeLabel.text = "??"
+//        currentImage.image = #imageLiteral(resourceName: "rainy")
+//        currentTypeLabel.text = "??"
         
         
         
@@ -57,6 +60,32 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+//    func downloadForcastData(completed: @escaping DownloadComplete)
+//    {
+//        let forcastWeatherURL = URL(string: FORCAST_URL)!
+//        Alamofire.request(forcastWeatherURL).responseJSON
+//            {
+//                response in
+//                
+//                let result = response.result
+//                print(response)
+//                print(FORCAST_URL)
+//                
+//                if let dict = result.value as? Dictionary<String, Anyobject>
+//                {
+//                    if let list = dict["list"] as? [Dictionry<String, Anyobject]>
+//                    {
+//                        for obj in list
+//                        {
+//                            let forcast = Forecast(weatherDict: obj)
+//                            
+//                        }
+//                    }
+//                }
+//
+//    }
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -76,6 +105,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     {
         dateLabel.text = currentWeather.date
         locationLabel.text = currentWeather.cityName
+        currentTypeLabel.text = currentWeather.weatherType
+        currentTempLabel.text = "\(currentWeather.currentTemp!)"
+        currentImage.image = UIImage(named: currentWeather.weatherType)
     }
     
     
